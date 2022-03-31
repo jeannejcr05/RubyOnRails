@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @newday.title %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @newday.date %>
+</p>
+
+<p>
+  <strong>Mood:</strong>
+  <%= @newday.mood %>
+</p>
+
+<p>
+  <strong>Doing:</strong>
+  <%= @newday.doing %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @newday.picture %>
+</p>
+
+<%= link_to 'Edit', edit_newday_path(@newday) %> |
+<%= link_to 'Back', newdays_path %>

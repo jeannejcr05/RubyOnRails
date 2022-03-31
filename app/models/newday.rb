@@ -1,0 +1,2 @@
+class Newday < ApplicationRecord
+end

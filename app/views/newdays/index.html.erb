@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Newdays</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Mood</th>
+      <th>Doing</th>
+      <th>Picture</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @newdays.each do |newday| %>
+      <tr>
+        <td><%= newday.title %></td>
+        <td><%= newday.date %></td>
+        <td><%= newday.mood %></td>
+        <td><%= newday.doing %></td>
+        <td><%= newday.picture %></td>
+        <td><%= link_to 'Show', newday %></td>
+        <td><%= link_to 'Edit', edit_newday_path(newday) %></td>
+        <td><%= link_to 'Destroy', newday, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Newday', new_newday_path %>
