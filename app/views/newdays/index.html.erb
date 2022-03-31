@@ -1,35 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Newdays</h1>
+<div class="back">
+<h1>Days on rails</h1>
+<div class="text-center"><div class="btn green"> <%= link_to 'Nouvelle journée', new_newday_path %> </div></div>
+</div>
+
+<h2>Mes archives :</h2>
+
 
 <table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Date</th>
-      <th>Mood</th>
-      <th>Doing</th>
-      <th>Picture</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
   <tbody>
     <% @newdays.each do |newday| %>
       <tr>
         <td><%= newday.title %></td>
         <td><%= newday.date %></td>
-        <td><%= newday.mood %></td>
-        <td><%= newday.doing %></td>
-        <td><%= newday.picture %></td>
-        <td><%= link_to 'Show', newday %></td>
-        <td><%= link_to 'Edit', edit_newday_path(newday) %></td>
-        <td><%= link_to 'Destroy', newday, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Voir', newday %></td>
+        <td><%= link_to 'Modifier', edit_newday_path(newday) %></td>
+        <td><%= link_to 'Supprimer', newday, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Newday', new_newday_path %>
