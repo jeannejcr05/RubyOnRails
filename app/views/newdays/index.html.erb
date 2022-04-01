@@ -7,19 +7,14 @@
 
 <h2>Mes archives :</h2>
 
-
-<table>
-  <tbody>
-    <% @newdays.each do |newday| %>
-      <tr>
-        <td><%= newday.title %></td>
-        <td><%= newday.date %></td>
-        <td><%= link_to 'Voir', newday %></td>
-        <td><%= link_to 'Modifier', edit_newday_path(newday) %></td>
-        <td><%= link_to 'Supprimer', newday, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<div class="row row-cols-1 row-cols-md-4 g-4">
+  <% @newdays.each do |newday| %>
+    <div class="col">
+      <%= newday.title %>
+      <%= newday.date %>
+      <%= link_to 'Voir', newday %>
+      <%= link_to 'Modifier', edit_newday_path(newday) %>
+      <%= link_to 'Supprimer', newday, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  <% end %>
+</div>
