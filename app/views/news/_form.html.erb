@@ -31,12 +31,12 @@
     <%= form.text_area :doing placeholder="Ce que j'ai fait aujourd'hui..." %>
   </div>
 
-  <div class="field" placeholder="L'url de ma photo...">
+  <div class="field">
     <%= form.label :picture %>
     <%= form.text_area :picture %>
   </div>
 
   <div class="action">
-    <%= form.submit %>
+    <%= form.submit, label:"Créer"%>
   </div>
 <% end %>
