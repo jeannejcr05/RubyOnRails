@@ -2,9 +2,9 @@
 
 <h1>News</h1>
 
-<div class="row row-cols-1 row-cols-md-4 g-4">
+<div class="row row-cols-1 row-cols-md-12 g-12">
   <% @news.each do |news| %>
-    <div class="col mb-4">
+    <div class="col-12">
       <div class="title"> <%= news.title%></div>
       <div class="date">  <%= news.date %></div>
       <%= link_to 'Show', news %>
