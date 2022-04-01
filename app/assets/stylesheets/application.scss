@@ -134,7 +134,6 @@ input[type=text]:focus{
   border: none;
 }
 
-
 input[type=submit]{
   margin-bottom:20px;
 }
@@ -214,4 +213,8 @@ input[type=submit]:hover {
   font-size: 1rem;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.main{
+  line-height: 35px;
 }
