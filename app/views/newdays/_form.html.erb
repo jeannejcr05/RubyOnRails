@@ -12,17 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :titre %>
+    <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
 
-  <div class="field">
     <%= form.label :date %>
-    <%= form.date_select :date %>
+    <%= form.date_field :date, as: :date, html5: true %>
   </div>
 
   <div class="field">
-    <%= form.label :humeur %>
+    <%= form.label :mood %>
     <%= form.text_field :mood %>
   </div>
 
@@ -32,7 +31,7 @@
   </div>
 
   <div class="field">
-    <%= form.label :photo %>
+    <%= form.label :picture %>
     <%= form.text_area :picture %>
   </div>
 

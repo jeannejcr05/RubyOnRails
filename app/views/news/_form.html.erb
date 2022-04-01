@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field" placeholder="Le titre de ma journée...">
     <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
@@ -21,22 +21,22 @@
     <%= form.date_select :date %>
   </div>
 
-  <div class="field">
+  <div class="field" placeholder="Ma météo interne...">
     <%= form.label :mood %>
     <%= form.text_field :mood %>
   </div>
 
   <div class="field">
     <%= form.label :doing %>
-    <%= form.text_area :doing %>
+    <%= form.text_area :doing placeholder="Ce que j'ai fait aujourd'hui..." %>
   </div>
 
-  <div class="field">
+  <div class="field" placeholder="L'url de ma photo...">
     <%= form.label :picture %>
     <%= form.text_area :picture %>
   </div>
 
-  <div class="actions">
+  <div class="action">
     <%= form.submit %>
   </div>
 <% end %>
